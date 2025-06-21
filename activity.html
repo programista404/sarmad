@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الأنشطة</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/style/main.css" />
+  </head>
+  <body>
+    <div class="activity-header mb-3">
+      <div class="d-flex align-items-center mb-2">
+        <input
+          type="text"
+          class="form-control rounded-pill me-2 activity-search-input"
+          placeholder="بحث عن نشاط..." />
+        <span class="fw-bold flex-grow-1 text-end">مرحباً بك في المنطقة الشرقية</span>
+      </div>
+    </div>
+    <div class="container" style="max-width: 500px">
+      <div class="activity-filters d-flex flex-nowrap mb-3">
+        <button class="btn btn-outline-success active" onclick="setActivityFilter(this)">
+          الكل
+        </button>
+        <button class="btn btn-outline-success" onclick="setActivityFilter(this)">العمر</button>
+        <button class="btn btn-outline-success" onclick="setActivityFilter(this)">الفعالية</button>
+        <button class="btn btn-outline-success" onclick="setActivityFilter(this)">المزيد</button>
+      </div>
+      <div class="activity-card mb-3">
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+          alt="مهرجان السالم"
+          class="activity-img" />
+        <h5 class="fw-bold mb-2">مهرجان السالم</h5>
+        <div class="activity-meta mb-1"><i class="fa fa-location-dot"></i> الرياض</div>
+        <div class="activity-meta mb-1">
+          <i class="fa fa-calendar"></i> ١٠ يوليو ٢٠٢٥ - ٨:٠٠ مساءً
+        </div>
+        <div class="activity-meta mb-1"><i class="fa fa-money-bill"></i> مجاني</div>
+        <div class="activity-meta"><i class="fa fa-users"></i> ١٢٠ مشارك</div>
+      </div>
+      <div class="activity-card mb-3">
+        <img
+          src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+          alt="فعالية الفنون"
+          class="activity-img" />
+        <h5 class="fw-bold mb-2">فعالية الفنون</h5>
+        <div class="activity-meta mb-1"><i class="fa fa-location-dot"></i> الدمام</div>
+        <div class="activity-meta mb-1">
+          <i class="fa fa-calendar"></i> ١٥ يوليو ٢٠٢٥ - ٦:٠٠ مساءً
+        </div>
+        <div class="activity-meta mb-1"><i class="fa fa-money-bill"></i> ٥٠ ريال</div>
+        <div class="activity-meta"><i class="fa fa-users"></i> ٨٠ مشارك</div>
+      </div>
+      <!-- More activity cards ... -->
+    </div>
+    <nav class="bottom-navbar d-flex justify-content-around align-items-center">
+      <a href="main-feed.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
+      <a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="add-content.html" class="nav-link"><i class="fa-solid fa-circle-plus"></i></a>
+      <a href="profile.html" class="nav-link"><i class="fa-regular fa-user"></i></a>
+    </nav>
+    <script>
+      function setActivityFilter(btn) {
+        document
+          .querySelectorAll('.activity-filters .btn')
+          .forEach(b => b.classList.remove('active'))
+        btn.classList.add('active')
+        // Optionally, filter activities
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>واجهة الطفل</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/style/main.css" />
+  </head>
+  <body class="kids-bg">
+    <div class="kids-header-beige position-relative mb-3">
+      <a href="index.html" class="kids-back-btn position-absolute top-0 start-0 m-3"
+        ><i class="fa fa-arrow-right fa-lg"></i
+      ></a>
+      <span class="fw-bold fs-5 position-absolute top-0 end-0 m-3">واجهة الطفل</span>
+      <img
+        src="assets/img/kids-illustration.png"
+        alt="أطفال يقرأون"
+        class="kids-hero-illustration d-block mx-auto" />
+    </div>
+    <div class="container" style="max-width: 500px">
+      <div class="kids-filters-bar d-flex flex-nowrap mb-3">
+        <button class="kids-filter-btn active" onclick="setKidsFilter(this)">الكل</button>
+        <button class="kids-filter-btn" onclick="setKidsFilter(this)">زيارات</button>
+        <button class="kids-filter-btn" onclick="setKidsFilter(this)">أماكن</button>
+        <button class="kids-filter-btn" onclick="setKidsFilter(this)">الجدة سلام</button>
+        <button class="kids-filter-btn" onclick="setKidsFilter(this)">قصة</button>
+        <button class="kids-filter-btn" onclick="setKidsFilter(this)">أطفال</button>
+        <button class="kids-filter-btn" onclick="setKidsFilter(this)">فنون</button>
+      </div>
+      <div class="kids-feed-card mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <img src="assets/img/sarmad-logo.svg" alt="سرمد" class="kids-feed-avatar me-2" />
+          <div class="fw-bold">سرمد <span class="kids-feed-username">@SARMAD</span></div>
+        </div>
+        <div class="kids-feed-title fw-bold mb-1">من أمثالنا القديمة</div>
+        <div class="kids-feed-content mb-2">
+          "اللي ما يعرف الصقر يشويه"<br />
+          (يعلمنا أن لازم نحترم الشيء الغالي حتى لو ما قيمناه)
+        </div>
+        <div class="kids-feed-meta d-flex align-items-center gap-3">
+          <span><i class="fa fa-heart"></i> 1.1 k</span>
+          <span><i class="fa fa-eye"></i> 607</span>
+          <span><i class="fa fa-paper-plane"></i> 12 k</span>
+        </div>
+      </div>
+      <div class="kids-feed-card mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <img src="assets/img/sarmad-logo.svg" alt="سرمد" class="kids-feed-avatar me-2" />
+          <div class="fw-bold">سرمد <span class="kids-feed-username">@SARMAD</span></div>
+        </div>
+        <div class="kids-feed-title fw-bold mb-1">حكمة اليوم</div>
+        <div class="kids-feed-content mb-2">اللي يسعد غيره يكسب قلوب الناس ويحس بالسعادة.</div>
+        <div class="kids-feed-meta d-flex align-items-center gap-3">
+          <span><i class="fa fa-heart"></i> 3.2 m</span>
+          <span><i class="fa fa-eye"></i> 16k</span>
+          <span><i class="fa fa-paper-plane"></i> 34 k</span>
+        </div>
+      </div>
+      <div class="kids-feed-card mb-3">
+        <div class="d-flex align-items-center mb-2">
+          <img src="assets/img/sarmad-logo.svg" alt="سرمد" class="kids-feed-avatar me-2" />
+          <div class="fw-bold">سرمد <span class="kids-feed-username">@SARMAD</span></div>
+        </div>
+        <div class="kids-feed-title fw-bold mb-1">قصة من زمان</div>
+        <div class="kids-feed-content mb-2">
+          تعرفون وش صار يوم كل الجد يضيع في البر؟ القصة فيها مغامرة وحكمة.
+        </div>
+        <div class="kids-feed-meta d-flex align-items-center gap-3">
+          <span><i class="fa fa-heart"></i> 2.1 k</span>
+          <span><i class="fa fa-eye"></i> 8k</span>
+          <span><i class="fa fa-paper-plane"></i> 10 k</span>
+        </div>
+      </div>
+      <!-- More kids feed cards ... -->
+    </div>
+    <nav class="bottom-navbar d-flex justify-content-around align-items-center">
+      <a href="main-feed.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
+      <a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="add-content.html" class="nav-link"><i class="fa-solid fa-circle-plus"></i></a>
+      <a href="profile.html" class="nav-link"><i class="fa-regular fa-user"></i></a>
+    </nav>
+    <script>
+      function setKidsFilter(btn) {
+        document
+          .querySelectorAll('.kids-filters-bar .kids-filter-btn')
+          .forEach(b => b.classList.remove('active'))
+        btn.classList.add('active')
+        // Optionally, filter kids content
+      }
+    </script>
+  </body>
+</html>

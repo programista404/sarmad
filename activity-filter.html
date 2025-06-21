@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تصفية الأنشطة</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/style/main.css" />
+  </head>
+  <body class="activity-filter-bg">
+    <div class="filter-header-brown position-relative mb-3">
+      <div class="d-flex align-items-center justify-content-between px-3 pt-3">
+        <a href="activity.html" class="text-white"><i class="fa fa-arrow-right fa-lg"></i></a>
+        <span class="fw-bold fs-6 mx-auto text-white">السابق</span>
+        <span style="width: 32px"></span>
+      </div>
+      <div class="search-bar-wrap px-3 pb-3">
+        <div class="search-bar-brown d-flex align-items-center">
+          <input type="text" class="form-control search-input-brown" placeholder="بحث" />
+          <i class="fa fa-search search-icon-brown"></i>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="max-width: 500px">
+      <h4 class="fw-bold text-center mb-3">تصفية</h4>
+      <div class="filter-card-beige p-4 mb-4">
+        <div class="row mb-3 align-items-center">
+          <div class="col-12 mb-2 fw-bold text-end">العمر</div>
+          <div class="col-5">
+            <input type="number" class="form-control filter-input" placeholder="من" min="0" />
+          </div>
+          <div class="col-2 text-center">الى</div>
+          <div class="col-5">
+            <input type="number" class="form-control filter-input" placeholder="الى" min="0" />
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="fw-bold mb-1 text-end">المنطقة الجغرافية</div>
+          <input type="text" class="form-control filter-input" placeholder="الجبيل" />
+        </div>
+        <div class="mb-3">
+          <div class="fw-bold mb-1 text-end">الفترة الزمنية</div>
+          <select class="form-select filter-input">
+            <option>الأسبوع الماضي</option>
+            <option>اليوم</option>
+            <option>هذا الأسبوع</option>
+            <option>هذا الشهر</option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between gap-2 mb-4">
+        <button class="btn filter-btn-brown flex-fill" onclick="window.history.back()">
+          إلغاء
+        </button>
+        <button class="btn filter-btn-brown flex-fill">تطبيق</button>
+      </div>
+    </div>
+    <nav class="bottom-navbar d-flex justify-content-around align-items-center">
+      <a href="main-feed.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
+      <a href="#" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="add-content.html" class="nav-link"><i class="fa-solid fa-circle-plus"></i></a>
+      <a href="profile.html" class="nav-link"><i class="fa-regular fa-user"></i></a>
+    </nav>
+  </body>
+</html>
