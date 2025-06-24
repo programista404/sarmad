@@ -1,17 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Cairo:wght@400;500;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
 body {
   background: #f8f5f0;
   font-family: 'Tajawal', 'Cairo', sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 .sarmad-bg {
   background: #f3f0e7;
 }
 .header-wave {
-  background: #184c3a;
-  border-bottom-left-radius: 60% 10%;
-  border-bottom-right-radius: 60% 10%;
-  min-height: 210px;
-  position: relative;
-  overflow: hidden;
+  background: #045646;
+  min-height: 250px;
+  margin-bottom: 100px;
+}
+.header-wave::before {
+  content: '';
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: url(../images/wave.svg) no-repeat center bottom;
+  background-size: cover;
+  z-index: -1;
 }
 .wave-bg {
   position: absolute;
@@ -19,7 +37,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #184c3a;
+  background: #045646;
   z-index: 0;
   border-bottom-left-radius: 60% 10%;
   border-bottom-right-radius: 60% 10%;
@@ -33,7 +51,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: #184c3a;
+  color: #045646;
   margin: 0 auto 10px auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -53,7 +71,7 @@ body {
   border-radius: 1.5rem;
 }
 .sarmad-btn {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   border-radius: 2rem;
   font-size: 1.1rem;
@@ -69,10 +87,18 @@ body {
   box-shadow: 0 4px 24px rgba(24, 76, 58, 0.15);
 }
 .illustration {
-  width: 120px;
-  height: 120px;
+  position: relative;
+  top: -90px;
+  width: 220px;
+  height: 200px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: -60px !important;
+}
+.illustration.child {
+  top: -120px;
+  width: 680px;
+  height: 210px;
+  margin-bottom: -90px !important;
 }
 .form-control,
 .btn {
@@ -90,7 +116,7 @@ body {
 }
 .social-login i {
   font-size: 1.5rem;
-  color: #184c3a;
+  color: #045646;
   cursor: pointer;
   transition: color 0.2s;
 }
@@ -109,7 +135,7 @@ body {
   color: #aaa;
 }
 .link {
-  color: #184c3a;
+  color: #045646;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -124,7 +150,6 @@ body {
 .sarmad-logo {
   display: block;
   margin: 0 auto;
-  max-width: 180px;
 }
 .sarmad-calligraphy img {
   display: block;
@@ -137,29 +162,37 @@ body {
   font-weight: 500;
 }
 .sarmad-signin-card {
-  background: #184c3a;
+  background: #045646;
   border-radius: 2rem 2rem 1.5rem 1.5rem;
   box-shadow: 0 4px 32px rgba(24, 76, 58, 0.13);
-  margin-top: -40px;
   color: #fff;
 }
 .sarmad-input {
-  background: #215c46;
   color: #fff;
-  border: none;
-  border-radius: 1.2rem;
-  box-shadow: 0 2px 8px rgba(24, 76, 58, 0.07);
-  padding-right: 2.5rem;
+  border-radius: 1rem;
+  border: 0.304px solidrgba(255, 255, 255, 0.31);
+  background: radial-gradient(
+    151.92% 127.02% at 15.32% 21.04%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.04) 77.08%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(6.0781121253967285px);
 }
 .sarmad-input::placeholder {
   color: #d0e2d8;
   opacity: 1;
 }
 .sarmad-input:focus {
-  background: #256b4d;
+  background: radial-gradient(
+    151.92% 127.02% at 15.32% 21.04%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.04) 77.08%,
+    rgba(255, 255, 255, 0) 100%
+  );
   color: #fff;
-  border: none;
-  box-shadow: 0 2px 12px rgba(24, 76, 58, 0.13);
+  border: 0.304px solidrgba(255, 255, 255, 0.31);
+  box-shadow: none;
 }
 .sarmad-input-icon {
   right: 1rem;
@@ -170,7 +203,7 @@ body {
   pointer-events: none;
 }
 .sarmad-btn-green {
-  background: linear-gradient(90deg, #256b4d 0%, #184c3a 100%);
+  background: linear-gradient(90deg, #256b4d 0%, #045646 100%);
   color: #fff;
   border-radius: 2rem;
   font-size: 1.1rem;
@@ -180,37 +213,26 @@ body {
   transition: background 0.2s, box-shadow 0.2s;
 }
 .sarmad-btn-green:hover {
-  background: linear-gradient(90deg, #184c3a 0%, #256b4d 100%);
+  background: linear-gradient(90deg, #045646 0%, #256b4d 100%);
   color: #fff;
   box-shadow: 0 4px 24px rgba(24, 76, 58, 0.18);
 }
 .sarmad-divider {
   text-align: center;
-  color: #b7cfc2;
+  color: #000000;
   position: relative;
   margin: 1.5rem 0 1.2rem 0;
 }
 .sarmad-divider span {
-  background: #184c3a;
   padding: 0 1.2rem;
   position: relative;
   z-index: 1;
   font-size: 1.1rem;
 }
-.sarmad-divider:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #b7cfc2;
-  z-index: 0;
-}
 .sarmad-social-login {
   background: #f8f5f0;
-  border-radius: 1.5rem;
-  padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+  border-radius: 4.5rem 4.5rem 0 0;
+  padding: 1rem 2rem 3rem 2rem;
   box-shadow: 0 2px 8px rgba(24, 76, 58, 0.07);
 }
 .sarmad-social-btn {
@@ -223,7 +245,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
-  color: #184c3a;
+  color: #045646;
   box-shadow: 0 2px 8px rgba(24, 76, 58, 0.07);
   transition: box-shadow 0.2s, background 0.2s;
 }
@@ -232,13 +254,11 @@ body {
   box-shadow: 0 4px 16px rgba(24, 76, 58, 0.13);
 }
 .sarmad-link {
-  color: #256b4d;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.2s;
 }
 .sarmad-link:hover {
-  color: #184c3a;
   text-decoration: underline;
 }
 
@@ -323,7 +343,7 @@ body {
   margin-right: 0.5rem;
 }
 .kids-feed-title {
-  color: #184c3a;
+  color: #045646;
   font-size: 1.08rem;
 }
 .kids-feed-content {
@@ -334,6 +354,19 @@ body {
   color: #256b4d;
   font-size: 0.97rem;
   gap: 1.2rem;
+}
+
+/* Splash */
+.splash {
+  background: url('../images/splash-bg.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.splash img {
+  position: absolute;
+  bottom: 80px;
 }
 
 /* Activity Filter Enhancements */
@@ -431,7 +464,7 @@ body {
 
 /* Activity Page Custom Styles */
 .activity-header {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -451,11 +484,11 @@ body {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   background: #fff;
-  color: #184c3a;
+  color: #045646;
   box-shadow: 0 2px 8px rgba(24, 76, 58, 0.07);
 }
 .activity-filters .btn.active {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
 }
 .activity-card {
@@ -474,7 +507,7 @@ body {
 }
 .activity-meta {
   font-size: 0.97rem;
-  color: #184c3a;
+  color: #045646;
   margin-bottom: 0.3rem;
 }
 .activity-meta i {
@@ -488,7 +521,7 @@ body {
   text-align: right;
 }
 .add-content-header .back-link {
-  color: #184c3a;
+  color: #045646;
   font-size: 1.1rem;
   text-decoration: none;
   margin-bottom: 1.2rem;
@@ -516,7 +549,7 @@ body {
 }
 .sarmad-input-light:focus {
   background: #e3dfd2;
-  color: #184c3a;
+  color: #045646;
   border: none;
   box-shadow: 0 2px 12px rgba(24, 76, 58, 0.13);
 }
@@ -533,7 +566,7 @@ body {
 }
 .sarmad-textarea-light:focus {
   background: #e3dfd2;
-  color: #184c3a;
+  color: #045646;
   border: none;
   box-shadow: 0 2px 12px rgba(24, 76, 58, 0.13);
 }
@@ -554,7 +587,7 @@ body {
 }
 .add-content-type-btn {
   border-radius: 1.5rem;
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   border: none;
   min-width: 60px;
@@ -566,7 +599,7 @@ body {
 }
 .add-content-type-btn:not(.active) {
   background: #e3dfd2;
-  color: #184c3a;
+  color: #045646;
   box-shadow: none;
 }
 /* sarmad-btn-green already exists, but add margin-bottom for add-content page */
@@ -578,19 +611,29 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #184c3a;
+  background: #045646c1;
   border-top: 1px solid #eee;
   z-index: 100;
   box-shadow: 0 -2px 12px rgba(24, 76, 58, 0.07);
   padding: 0.2rem 0;
 }
 .bottom-navbar .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-size: 1.5rem;
-  padding: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 1000px;
+  width: 68px;
+  height: 68px;
 }
 .bottom-navbar .nav-link.active {
   color: #2e7d5a;
+}
+.bottom-navbar .nav-link.add {
+  margin-top: -32px;
+  background: #045646;
 }
 
 /* Main Feed Header */
@@ -599,17 +642,16 @@ body {
   border-bottom-left-radius: 60% 10%;
   border-bottom-right-radius: 60% 10%;
   min-height: 120px;
-  color: #184c3a;
-  padding: 1.2rem 1rem 0.7rem 1rem;
+  color: #045646;
+  padding: 1.2rem 1rem 0 1rem;
   position: relative;
-  text-align: center;
   box-shadow: 0 2px 12px rgba(24, 76, 58, 0.04);
 }
 .main-feed-header .back-link {
   position: absolute;
   top: 1.2rem;
   right: 1.2rem;
-  color: #184c3a;
+  color: #045646;
   font-size: 1.1rem;
   text-decoration: none;
   z-index: 2;
@@ -629,12 +671,13 @@ body {
   margin-bottom: 0.7rem;
 }
 .main-feed-header .region-banner-img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 1.2rem;
-  margin: 0 auto 1rem auto;
+  display: block;
+  width: calc(100% + 2rem);
+  max-width: unset;
+  margin-inline: -1rem;
+  border-radius: 0;
   object-fit: cover;
-  height: 120px;
+  height: 200px;
   background: #e0e0e0;
   box-shadow: 0 2px 12px rgba(24, 76, 58, 0.07);
 }
@@ -651,7 +694,7 @@ body {
 .category-pills .btn {
   border-radius: 2rem;
   background: #e3dfd2;
-  color: #184c3a;
+  color: #045646;
   font-weight: 500;
   border: none;
   min-width: 70px;
@@ -660,8 +703,8 @@ body {
 }
 .category-pills .btn.active {
   background: #fff;
-  color: #184c3a;
-  border: 2px solid #184c3a;
+  color: #045646;
+  border: 2px solid #045646;
   box-shadow: 0 4px 16px rgba(24, 76, 58, 0.13);
 }
 
@@ -689,7 +732,7 @@ body {
   border-top: 0;
 }
 .feed-card .fw-bold {
-  color: #184c3a;
+  color: #045646;
 }
 .feed-card .text-muted.username {
   color: #8b9a8d !important;
@@ -713,7 +756,7 @@ body {
   text-align: right;
 }
 .notif-header .back-link {
-  color: #184c3a;
+  color: #045646;
   font-size: 1.1rem;
   text-decoration: none;
   margin-bottom: 1.2rem;
@@ -735,7 +778,7 @@ body {
 .notif-tabs .tab-btn {
   background: none;
   border: none;
-  color: #184c3a;
+  color: #045646;
   font-size: 1.05rem;
   font-weight: 500;
   border-bottom: 2px solid transparent;
@@ -774,7 +817,7 @@ body {
 }
 .friend-requests-bar .show-requests {
   margin-right: auto;
-  color: #184c3a;
+  color: #045646;
   font-weight: 500;
   text-decoration: none;
   font-size: 1.05rem;
@@ -812,7 +855,7 @@ body {
 }
 .notif-item .notif-title {
   font-weight: 600;
-  color: #184c3a;
+  color: #045646;
   font-size: 1.05rem;
   margin-bottom: 0.1rem;
 }
@@ -837,7 +880,7 @@ body {
   border-bottom-right-radius: 2rem;
   padding: 0 0 1.5rem 0;
   text-align: right;
-  color: #184c3a;
+  color: #045646;
   position: relative;
   box-shadow: 0 2px 12px rgba(24, 76, 58, 0.04);
 }
@@ -872,7 +915,7 @@ body {
   margin-bottom: 0.2rem;
 }
 .profile-header .profile-bio {
-  color: #184c3a;
+  color: #045646;
   font-size: 1rem;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -891,7 +934,7 @@ body {
 }
 .profile-stats .stat {
   font-weight: 700;
-  color: #184c3a;
+  color: #045646;
   font-size: 1.05rem;
 }
 .profile-stats .label {
@@ -906,7 +949,7 @@ body {
 
 /* Salem Chat Page Custom Styles */
 .chat-header {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -945,7 +988,7 @@ body {
 }
 .bubble.salem .msg {
   background: #e8f5e9;
-  color: #184c3a;
+  color: #045646;
   border-radius: 1.5rem 1.5rem 0.5rem 1.5rem;
   padding: 0.7rem 1.2rem;
   margin-left: 0.7rem;
@@ -989,7 +1032,7 @@ body {
   font-size: 1rem;
 }
 .chat-input-bar .mic-btn {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   border-radius: 50%;
   width: 44px;
@@ -1083,7 +1126,7 @@ body {
 }
 .side-menu-link:hover {
   background: #e0e0e0;
-  color: #184c3a;
+  color: #045646;
 }
 .side-menu-link .badge {
   background: #2e7d5a;
@@ -1156,7 +1199,7 @@ body {
 }
 /* Salem page custom styles migrated from HTML */
 .salem-header {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -1185,11 +1228,11 @@ body {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   background: #fff;
-  color: #184c3a;
+  color: #045646;
   box-shadow: 0 2px 8px rgba(24, 76, 58, 0.07);
 }
 .salem-filters .btn.active {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
 }
 .salem-card {
@@ -1207,16 +1250,13 @@ body {
 }
 
 /* Sign-in page: max-width for card */
-.signin-card-maxwidth {
-  max-width: 370px;
+.sarmad-bg.sign-in-bg {
+  background: #045646;
+}
+#sign-in .header-wave {
+  margin-bottom: 0;
 }
 /* Ensure .sarmad-logo and .sarmad-calligraphy img max-widths are set globally */
-.sarmad-logo {
-  max-width: 180px;
-}
-.sarmad-calligraphy img {
-  max-width: 170px;
-}
 /* Lock icon RTL positioning for sign-in */
 .lock-icon-rtl {
   right: 1rem;
@@ -1229,7 +1269,7 @@ body {
 
 /* Subscription page custom styles migrated from HTML */
 .sub-header {
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -1258,11 +1298,11 @@ body {
   transition: border 0.2s;
 }
 .plan-card.selected {
-  border-color: #184c3a;
+  border-color: #045646;
   background: #e8f5e9;
 }
 .plan-radio {
-  accent-color: #184c3a;
+  accent-color: #045646;
   width: 1.3em;
   height: 1.3em;
 }
@@ -1271,7 +1311,7 @@ body {
   font-weight: 700;
   font-size: 1.1rem;
   padding: 0.9rem 0;
-  background: #184c3a;
+  background: #045646;
   color: #fff;
   box-shadow: 0 2px 8px rgba(24, 76, 58, 0.07);
   margin-top: 1.5rem;
