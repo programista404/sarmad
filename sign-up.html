@@ -24,15 +24,21 @@
             <div class="mb-3 position-relative">
               <input
                 type="text"
+                id="signup-first-name"
                 class="form-control sarmad-input p-4 ps-5"
-                placeholder="الاسم الأول" />
+                placeholder="الاسم الأول"
+                autocomplete="given-name" />
               <i class="fa-solid fa-user position-absolute sarmad-input-icon"></i>
             </div>
             <div class="mb-3 position-relative">
               <input
                 type="email"
+                id="signup-email"
                 class="form-control sarmad-input p-4 ps-5"
-                placeholder="البريد الإلكتروني" />
+                placeholder="البريد الإلكتروني"
+                autocomplete="email"
+                autocapitalize="off"
+                dir="ltr" />
               <i class="fa-solid fa-envelope position-absolute sarmad-input-icon"></i>
             </div>
             <div class="mb-3 position-relative">
@@ -40,10 +46,14 @@
                 type="password"
                 class="form-control sarmad-input p-4 ps-5"
                 id="signup-password"
-                placeholder="••••••••" />
+                placeholder="••••••••"
+                autocomplete="new-password" />
               <i
                 class="fa-solid fa-eye toggle-password"
-                onclick="togglePassword('signup-password', this)"></i>
+                data-password-target="signup-password"
+                role="button"
+                tabindex="0"
+                aria-label="إظهار/إخفاء كلمة المرور"></i>
               <i class="fa-solid fa-lock position-absolute sarmad-input-icon lock-icon-rtl"></i>
             </div>
             <div class="mb-3 position-relative">
@@ -51,7 +61,8 @@
                 type="password"
                 class="form-control sarmad-input p-4 ps-5"
                 id="signup-confirm"
-                placeholder="تأكيد كلمة المرور" />
+                placeholder="تأكيد كلمة المرور"
+                autocomplete="new-password" />
               <i class="fa-solid fa-lock position-absolute sarmad-input-icon lock-icon-rtl"></i>
             </div>
             <button type="button" class="btn sarmad-btn-green w-100 mb-2 mt-2 fw-bold py-4">
@@ -73,19 +84,7 @@
         </div>
       </div>
     </div>
-    <script>
-      function togglePassword(id, el) {
-        const input = document.getElementById(id)
-        if (input.type === 'password') {
-          input.type = 'text'
-          el.classList.remove('fa-eye')
-          el.classList.add('fa-eye-slash')
-        } else {
-          input.type = 'password'
-          el.classList.remove('fa-eye-slash')
-          el.classList.add('fa-eye')
-        }
-      }
-    </script>
+    <script src="assets/main.js" defer></script>
+    <script src="assets/auth.js" defer></script>
   </body>
 </html>

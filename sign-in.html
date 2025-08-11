@@ -25,8 +25,12 @@
             <div class="mb-3 position-relative">
               <input
                 type="text"
+                id="signin-identifier"
                 class="form-control sarmad-input p-4 ps-5"
-                placeholder="البريد الإلكتروني أو رقم الهاتف" />
+                placeholder="البريد الإلكتروني أو رقم الهاتف"
+                autocomplete="username"
+                autocapitalize="off"
+                dir="ltr" />
               <i class="fa-solid fa-envelope position-absolute sarmad-input-icon"></i>
             </div>
             <div class="mb-2 position-relative">
@@ -34,10 +38,14 @@
                 type="password"
                 class="form-control sarmad-input p-4 ps-5"
                 id="signin-password"
-                placeholder="••••••••" />
+                placeholder="••••••••"
+                autocomplete="current-password" />
               <i
                 class="fa-solid fa-eye toggle-password"
-                onclick="togglePassword('signin-password', this)"></i>
+                data-password-target="signin-password"
+                role="button"
+                tabindex="0"
+                aria-label="إظهار/إخفاء كلمة المرور"></i>
               <i class="fa-solid fa-lock position-absolute sarmad-input-icon lock-icon-rtl"></i>
             </div>
             <div class="mt-3 mb-4 text-end">
@@ -62,19 +70,7 @@
         </div>
       </div>
     </div>
-    <script>
-      function togglePassword(id, el) {
-        const input = document.getElementById(id)
-        if (input.type === 'password') {
-          input.type = 'text'
-          el.classList.remove('fa-eye')
-          el.classList.add('fa-eye-slash')
-        } else {
-          input.type = 'password'
-          el.classList.remove('fa-eye-slash')
-          el.classList.add('fa-eye')
-        }
-      }
-    </script>
+    <script src="assets/main.js" defer></script>
+    <script src="assets/auth.js" defer></script>
   </body>
 </html>

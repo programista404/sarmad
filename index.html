@@ -19,7 +19,16 @@
   <script>
     window.addEventListener('load', function () {
       setTimeout(function () {
-        window.location.href = 'select-user.html'
+        try {
+          var token = localStorage.getItem('auth_token')
+          if (token) {
+            window.location.href = 'main-feed.html'
+          } else {
+            window.location.href = 'sign-in.html'
+          }
+        } catch (e) {
+          window.location.href = 'sign-in.html'
+        }
       }, 2000)
     })
   </script>
